@@ -38,7 +38,7 @@ function App() {
     const myImage = changeBackground(listImg)
 
           let backgroundStyles =  {
-                                  backgroundImage: 'url(./img/Weather/Rain.gif)',
+                                  backgroundImage: 'url(./img/Cities/NewYork.jpg)',
                                     backgroundRepeat: 'no-repeat',
                                       backgroundPosition: 'left',
                                         backgroundSize: 'cover',
