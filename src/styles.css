@@ -1,0 +1,313 @@
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 16px;
+    background: #212529;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    color: #dee2e6;
+}
+
+*, 
+*::after, 
+*::before{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+h1{
+    font-size: 2rem;
+}
+
+li i{
+    padding: 1rem 0 1rem 1rem;
+}
+
+/*********************************** LOADING SCREEN ***************************************************/
+
+.loader-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background: #212529;
+    z-index: 1;
+}
+
+.spinner {
+    width: 10rem;
+    height: 10rem;
+    border: 0.8rem solid;
+    border-color: #dee2e6 transparent #dee2e6 transparent;
+    border-radius: 50%;
+    animation: spin-anim 1.2s linear infinite;
+}
+
+@keyframes spin-anim {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/*********************************** CARD CONTAINER APP ***************************************************/
+
+.card-container{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 50% 50%;
+    gap: 2rem;
+    height: 90vh;
+}
+
+.main-card::after{
+    content: '';
+    background-color: rgba(0, 0, 0, 0.363);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    backdrop-filter: blur(1.3px);
+    z-index: -1;
+}
+
+.small-card{
+    background-color: #343a40;
+    box-shadow: 0px 0px 23px 3px #000000;
+    grid-column: 2/4;
+    transform: scale(1);
+    transition: 0.2s;
+}
+
+.small-card:hover{
+    transform: scale(1.02);
+    transition: 0.2s;
+}
+
+/*********************************** CLOCK ***************************************************/
+
+.day-date{
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+    line-height: 3rem;
+    margin-top: 3rem;
+}
+
+.clock{
+    font-size: 7rem;
+    font-family: 'Oswald', sans-serif;
+}
+
+/*********************************** CARD CONTAINER WEATHER LOCAL ***************************************************/
+
+.description-big-card{
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 4rem;
+}
+
+.country-big-card{
+    font-size: 4rem;
+}
+
+.temperature-wheater{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+}
+
+.temperature-wheater p{
+    font-size: 3rem;
+}
+
+.temperature{
+    font-size: 6rem;
+    font-family: 'Oswald', sans-serif;
+}
+
+.icon-big-button{
+    background: none;
+    border: none;
+    color: gray;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.all-characteristics-weather{
+    display: flex;
+    justify-content: space-between;
+}
+
+.min-max-temperature{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.min-max-temperature i{
+    padding: 1rem;
+}
+
+.characteristics-weather{
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    line-height: 3rem;
+}
+
+.description-weather{
+    text-transform:capitalize;
+    font-size: 2rem;
+    text-align: end;
+}
+
+/*********************************** IMG CONTAINER TOKYO ***************************************************/
+
+.tokyo{
+   background-image: url(../public/img/Cities/Tokyo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center ;
+    height: 100%;
+    position: relative;
+    z-index: 0;
+}
+
+.tokyo::after{
+    content: '';
+    background-color: rgba(0, 0, 0, 0.363);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    backdrop-filter: blur(1px);
+    z-index: -1;
+}
+
+/*********************************** IMG CONTAINER NEW YORK ***************************************************/
+.new-york{
+    background-image: url(../public/img/Cities/NewYork.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    height: 100%;
+    position: relative;
+    z-index: 0;
+}
+
+.new-york::after{
+    content: '';
+    background-color: rgba(0, 0, 0, 0.363);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    backdrop-filter: blur(1px);
+    z-index: -1;
+   
+}
+
+/*********************************** ALL UTILITIES AND MORE OF SMALL CARD ***************************************************/
+
+.description-small-card{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    padding: 2rem;
+}
+
+.country-small-card{
+    font-size: 5rem;
+}
+
+.left-desciption-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.icon-small-description i{
+    padding: 1rem;
+}
+
+.right-description-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.small-description-weather{
+    text-transform: capitalize;
+}
+
+.small-icon{
+    width: 70%;
+}
+
+.temperature-small{
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.small-text-temperature{
+    font-size: 5rem;
+}
+
+.small-temperature{
+    display: flex;
+    align-items: center;
+}
+
+.small-temperature p{
+   font-size: 2rem;
+}
+
+.small-temperature button{
+   background: none;
+   border: none;
+   font-size: 2rem;
+   padding-left: 0.5rem;
+   cursor: pointer;
+   color: rgb(87, 83, 83);
+}
+
+/*************************************************************************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
