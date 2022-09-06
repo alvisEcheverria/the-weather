@@ -7,7 +7,7 @@ import useApiLocalWeather from './hooks/useApiLocalWeather';
 
 function App() {
 
-  /*  LOADING SCREEN --> const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
 
@@ -16,7 +16,7 @@ function App() {
           setLoading(false) 
         }, 3000)
 
-  }, [])*/
+  }, [])
 
   const {weather} = useApiLocalWeather(res => res.data)
 
@@ -53,13 +53,12 @@ function App() {
 
     <div className={"App"}>
 
-      {/* LOADING SCREEN -->
-      
+      {
       loading ? (
         <div className="loader-container">
           <div className='spinner'></div>
         </div>
-      ) : (*/
+      ) : (
       <div className='card-container'>
         <div className="main-card" style={backgroundStyles}>
            <WeatherLocal weather={weather}/>
@@ -71,7 +70,7 @@ function App() {
           <NewYork/>
         </div>
       </div>
-      /*)*/}
+      )}
     </div>
   )
 }
