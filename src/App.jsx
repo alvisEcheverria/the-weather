@@ -14,24 +14,24 @@ function App() {
       setLoading(true)
         setTimeout(()=>{
           setLoading(false) 
-        }, 5000)
+        }, 3000)
 
   }, [])
 
   const {weather} = useApiLocalWeather(res => res.data)
 
   const listImg = [
-                  {time: 'Thunderstorm', img: "url(./img/Weather/Thunderstorm.gif)"},
-                    {img: 'Drizzle',  img: "url(./img/Weather/Drizzle.gif)"},
-                      {img: 'Rain', img: "url(./img/Weather/Rain.gif)"},
-                        {img: 'Snow', img: "url(./img/Weather/Snow.gif)"},
-                          {img: 'Clear', img: "url(./img/Weather/Clear.gif)"},
-                            {time: 'Clouds', img: "url(./img/Weather/Clouds.gif)"}
+                  {weather: 'Thunderstorm', img: "url(./img/Weather/Thunderstorm.gif)"},
+                    {weather: 'Drizzle',  img: "url(./img/Weather/Drizzle.gif)"},
+                      {weather: 'Rain', img: "url(./img/Weather/Rain.gif)"},
+                        {weather: 'Snow', img: "url(./img/Weather/Snow.gif)"},
+                          {weather: 'Clear', img: "url(./img/Weather/Clear.gif)"},
+                            {weather: 'Clouds', img: "url(./img/Weather/Clouds.gif)"}
                   ]
 
     const changeBackground = (arrImg) =>{
 
-        return arrImg.find(item => item.time === weather.weather?.[0].main)
+        return arrImg.find(item => item.weather === weather.weather?.[0].main)
 
     }
 
