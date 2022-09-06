@@ -21,12 +21,12 @@ function App() {
   const {weather} = useApiLocalWeather(res => res.data)
 
   const listImg = [
-                  {time: 'Thunderstorm', img: "url(../public/img/Weather/Thunderstorm.gif)"},
-                    {img: 'Drizzle',  img: "url(../public/img/Weather/Drizzle.gif)"},
-                      {img: 'Rain', img: "url(../public/img/Weather/Rain.gif)"},
-                        {img: 'Snow', img: "url(../public/img/Weather/Snow.gif)"},
-                          {img: 'Clear', img: "url(../public/img/Weather/Clear.gif)"},
-                            {time: 'Clouds', img: "url(../public/img/Weather/Clouds.gif)"}
+                  {time: 'Thunderstorm', img: "url(./img/Weather/Thunderstorm.gif)"},
+                    {img: 'Drizzle',  img: "url(./img/Weather/Drizzle.gif)"},
+                      {img: 'Rain', img: "url(./img/Weather/Rain.gif)"},
+                        {img: 'Snow', img: "url(./img/Weather/Snow.gif)"},
+                          {img: 'Clear', img: "url(./img/Weather/Clear.gif)"},
+                            {time: 'Clouds', img: "url(./img/Weather/Clouds.gif)"}
                   ]
 
     const changeBackground = (arrImg) =>{
@@ -38,7 +38,7 @@ function App() {
     const myImage = changeBackground(listImg)
 
           let backgroundStyles =  {
-                                  backgroundImage: 'url(./img/Cities/NewYork.jpg)',
+                                  backgroundImage: `${myImage.img}`,
                                     backgroundRepeat: 'no-repeat',
                                       backgroundPosition: 'left',
                                         backgroundSize: 'cover',
