@@ -61,7 +61,7 @@ function App() {
       ) : (
       <div className='card-container'>
         <div className="main-card" style={backgroundStyles}>
-           <WeatherLocal weather={weather}/>
+          <WeatherLocal weather={weather}/>
         </div>
         <div className='small-card' >
           <Tokyo/>

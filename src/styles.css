@@ -65,7 +65,7 @@ li i{
     grid-template-columns: 2fr 1fr 1fr;
     grid-template-rows: 50% 50%;
     gap: 2rem;
-    height: 90vh;
+    width: 100%;
 }
 
 .main-card::after{
@@ -224,7 +224,6 @@ li i{
     left: 0;
     backdrop-filter: blur(1px);
     z-index: -1;
-   
 }
 
 /*********************************** ALL UTILITIES AND MORE OF SMALL CARD ***************************************************/
@@ -295,8 +294,38 @@ li i{
 
 /*************************************************************************************************************/
 
+@media (max-width: 540px) {
+    .card-container{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 2fr 1fr 1fr;
+        gap: 1rem;
+        height: none;
+    }
 
+    .small-card{
+        width: 95vw;
+        grid-column: 1/3;
+    }
 
+    .clock{
+        font-size: 20vw;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 912px) {
+    .card-container{
+        display: grid;
+        height: 95vh;
+    }
+}
+
+@media (min-width: 1024px) {
+    .card-container{
+        display: grid;
+        height: 90vh;
+    }
+}
 
 
 
